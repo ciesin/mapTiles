@@ -18,18 +18,18 @@ import {
 } from "maplibre-gl";
 import type {
   LngLatBoundsLike,
-  MapGeoJSONFeature,
+  // MapGeoJSONFeature,
   // MapTouchEvent,
   StyleSpecification,
 } from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
-import type { LayerSpecification } from "@maplibre/maplibre-gl-style-spec";
+// import type { LayerSpecification } from "@maplibre/maplibre-gl-style-spec";
 import {
-  For,
+  // For,
   createSignal,
   onMount,
 } from "solid-js";
-import { getTileSourceConfig, logConfig } from "./config";
+import { getTileSourceConfig } from "./config";
 import baseStyle from "./cartography.json";
 
 // Light configuration for 3D features
@@ -40,12 +40,12 @@ const LIGHT_CONFIG = {
   intensity: 0.9, // 0 to 1
 };
 
-function getSourceLayer(l: LayerSpecification): string {
-  if ("source-layer" in l && l["source-layer"]) {
-    return l["source-layer"];
-  }
-  return "";
-}
+// function getSourceLayer(l: LayerSpecification): string {
+//   if ("source-layer" in l && l["source-layer"]) {
+//     return l["source-layer"];
+//   }
+//   return "";
+// }
 
 // Custom control for attribution info button
 class AttributionInfoControl implements IControl {
@@ -80,37 +80,37 @@ class AttributionInfoControl implements IControl {
   }
 }
 
-const featureIdToOsmId = (raw: string | number) => {
-  return Number(BigInt(raw) & ((BigInt(1) << BigInt(44)) - BigInt(1)));
-};
+// const featureIdToOsmId = (raw: string | number) => {
+//   return Number(BigInt(raw) & ((BigInt(1) << BigInt(44)) - BigInt(1)));
+// };
 
-const featureIdToOsmType = (i: string | number) => {
-  const t = (BigInt(i) >> BigInt(44)) & BigInt(3);
-  if (t === BigInt(1)) return "node";
-  if (t === BigInt(2)) return "way";
-  if (t === BigInt(3)) return "relation";
-  return "not_osm";
-};
+// const featureIdToOsmType = (i: string | number) => {
+//   const t = (BigInt(i) >> BigInt(44)) & BigInt(3);
+//   if (t === BigInt(1)) return "node";
+//   if (t === BigInt(2)) return "way";
+//   if (t === BigInt(3)) return "relation";
+//   return "not_osm";
+// };
 
-const displayId = (featureId?: string | number) => {
-  if (featureId) {
-    const osmType = featureIdToOsmType(featureId);
-    if (osmType !== "not_osm") {
-      const osmId = featureIdToOsmId(featureId);
-      return (
-        <a
-          class="underline text-purple"
-          target="_blank"
-          rel="noreferrer"
-          href={`https://openstreetmap.org/${osmType}/${osmId}`}
-        >
-          {osmType} {osmId}
-        </a>
-      );
-    }
-  }
-  return featureId;
-};
+// const displayId = (featureId?: string | number) => {
+//   if (featureId) {
+//     const osmType = featureIdToOsmType(featureId);
+//     if (osmType !== "not_osm") {
+//       const osmId = featureIdToOsmId(featureId);
+//       return (
+//         <a
+//           class="underline text-purple"
+//           target="_blank"
+//           rel="noreferrer"
+//           href={`https://openstreetmap.org/${osmType}/${osmId}`}
+//         >
+//           {osmType} {osmId}
+//         </a>
+//       );
+//     }
+//   }
+//   return featureId;
+// };
 
 // const FeaturesProperties = (props: { features: MapGeoJSONFeature[] }) => {
 //   return (
@@ -370,11 +370,11 @@ function MapLibreView() {
       }),
     );
 
-    const popup = new Popup({
-      closeButton: true,
-      closeOnClick: true,
-      maxWidth: "none",
-    });
+    // const popup = new Popup({
+    //   closeButton: true,
+    //   closeOnClick: true,
+    //   maxWidth: "none",
+    // });
 
     map.on("load", () => {
       map.resize();
