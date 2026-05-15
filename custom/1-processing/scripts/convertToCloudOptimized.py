@@ -169,7 +169,7 @@ def convert_tif_to_cog(
             if output_path.exists():
                 output_path.unlink()
             if verbose:
-                print(f"\n  ❌ gdal_translate failed:\n     {stderr}")
+                print(f"\n  gdal_translate failed:\n     {stderr}")
             return False, stderr, None
 
         elapsed = time.time() - start_time
@@ -178,7 +178,7 @@ def convert_tif_to_cog(
         ratio = ((in_mb - out_mb) / in_mb * 100) if in_mb > 0 else 0
 
         if verbose:
-            print(f"\r  ✅ Complete in {elapsed:.1f}s")
+            print(f"\r   Complete in {elapsed:.1f}s")
             print(f"     Input:  {in_mb:.1f} MB  →  Output: {out_mb:.1f} MB  ({ratio:+.1f}%)")
 
         if cleanup_source:
@@ -269,7 +269,7 @@ def convert_gpkg_to_parquet(
             if output_path.exists():
                 output_path.unlink()
             if verbose:
-                print(f"\n  ❌ ogr2ogr failed:\n     {stderr}")
+                print(f"\n  ogr2ogr failed:\n     {stderr}")
             return False, stderr, None
 
         elapsed = time.time() - start_time
@@ -278,7 +278,7 @@ def convert_gpkg_to_parquet(
         ratio = ((in_mb - out_mb) / in_mb * 100) if in_mb > 0 else 0
 
         if verbose:
-            print(f"\r  ✅ Complete in {elapsed:.1f}s")
+            print(f"\r   Complete in {elapsed:.1f}s")
             print(f"     Input:  {in_mb:.1f} MB  →  Output: {out_mb:.1f} MB  ({ratio:+.1f}%)")
 
         if cleanup_source:
@@ -343,7 +343,7 @@ def batch_convert_directory(
 
     ok, msg = _check_gdal_tools()
     if not ok:
-        print(f"❌ {msg}")
+        print(f" {msg}")
         return {"success": False, "message": msg}
 
     # Build list of (input_folder, output_folder) pairs
@@ -451,17 +451,17 @@ def _record(results: dict, src: Path, out: Optional[Path], success: bool, msg: s
 
 def _print_summary(results: dict):
     print(f"\n{'='*70}")
-    print(f"📊 SUMMARY")
+    print(f" SUMMARY")
     print(f"{'='*70}")
     print(f"   Total:     {results['total_files']}")
-    print(f"   ✅ Done:   {results['converted']}")
+    print(f"    Done:   {results['converted']}")
     print(f"   ⊘  Skip:   {results['skipped']}")
-    print(f"   ❌ Errors: {len(results['errors'])}")
+    print(f"   Errors: {len(results['errors'])}")
     if results["output_files"]:
         total_mb = sum(f.stat().st_size for f in results["output_files"] if f.exists()) / 1024 / 1024
-        print(f"   💾 Output: {total_mb:.1f} MB")
+        print(f"    Output: {total_mb:.1f} MB")
     if results["errors"]:
-        print(f"\n❌ ERRORS:")
+        print(f"\n ERRORS:")
         for e in results["errors"]:
             print(f"   • {e['file']}: {e['error']}")
     print(f"{'='*70}\n")
