@@ -60,6 +60,48 @@ export const SOURCES = {
     ext: "mvt",
   },
 
+  grid3_cod_health_zones: {
+    archive: "tiles/grid3/cod/GRID3_COD_health_zones_v8_0",
+    attribution: '<a href="https://grid3.org">GRID3</a>',
+    maxzoom: 8,
+    ext: "mvt",
+  },
+
+  grid3_cod_health_zones_centroids: {
+    archive: "tiles/grid3/cod/GRID3_COD_health_zones_v8_0_centroids",
+    attribution: '<a href="https://grid3.org">GRID3</a>',
+    maxzoom: 2,
+    ext: "mvt",
+  },
+
+  grid3_cod_health_areas: {
+    archive: "tiles/grid3/cod/GRID3_COD_health_areas_v8_0",
+    attribution: '<a href="https://grid3.org">GRID3</a>',
+    maxzoom: 8,
+    ext: "mvt",
+  },
+
+  grid3_cod_health_areas_centroids: {
+    archive: "tiles/grid3/cod/GRID3_COD_health_areas_v8_0_centroids",
+    attribution: '<a href="https://grid3.org">GRID3</a>',
+    maxzoom: 4,
+    ext: "mvt",
+  },
+
+  grid3_cod_health_facilities: {
+    archive: "tiles/grid3/cod/GRID3_COD_health_facilities_v8_0",
+    attribution: '<a href="https://grid3.org">GRID3</a>',
+    maxzoom: 8,
+    ext: "mvt",
+  },
+
+  grid3_cod_settlement_names: {
+    archive: "tiles/grid3/cod/GRID3_COD_settlement_names_v8_0",
+    attribution: '<a href="https://grid3.org">GRID3</a>',
+    maxzoom: 8,
+    ext: "mvt",
+  },
+
   // ---------------------------------------------------------------------------
   // GRID3 — NGA (Nigeria)
   // ---------------------------------------------------------------------------
