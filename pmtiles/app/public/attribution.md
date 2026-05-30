@@ -10,12 +10,12 @@ Last updated: May 29, 2026
 
 Public URL: https://dev.ciesin.app/tiles/grid3/nga/GRID3_NGA_settlement_extents_v4_0.pmtiles
 
-Description:
-The GRID3 NGA - Settlement Blocks v4.0 dataset consists of settlement block polygons with building count, block area, building density, settlement classification, and related attributes for Nigeria (NGA).
+*The GRID3 NGA - Settlement Blocks v4.0 dataset consists of settlement block polygons with building count, block area, building density, settlement classification, and related attributes for Nigeria (NGA).*
 
-Derived from: "GRID3 NGA - Settlement Extents v4.0"
-https://doi.org/10.7916/d6gy-yh28. Accessed 29 May 2026.
+Derived from "GRID3 NGA - Settlement Extents v4.0" https://doi.org/10.7916/d6gy-yh28. Accessed 29 May 2026.
+
 Geographic extent: Nigeria (2.68° to 14.68° E, 4.27° to 13.89° N)
+
 Feature count: 2,558,865
 
 Technical specifications:
@@ -32,12 +32,12 @@ Technical specifications:
 
 Public URL: https://dev.ciesin.app/tiles/grid3/nga/GRID3_NGA_settlement_extents_v3_0.pmtiles
 
-Description:
-The GRID3 NGA - Settlement Extents v3.0 consists of a geographic representation of settlements in the Nigeria, in two forms: 1) settlement polygons, and 2) spatial points depicting the centroids of settled grid cells at 3-arc seconds (or ~100 meters) contained within settlement polygons. Both layers include attributes as described in the codebooks. Data inputs and methodology to derive the 2 layers is described in this document.
+*The GRID3 NGA - Settlement Extents v3.0 consists of a geographic representation of settlements in the Nigeria, in two forms: 1) settlement polygons, and 2) spatial points depicting the centroids of settled grid cells at 3-arc seconds (or ~100 meters) contained within settlement polygons. Both layers include attributes as described in the codebooks. Data inputs and methodology to derive the 2 layers is described in this document.*
 
-Derived from: "GRID3 NGA - Settlement Extents v3.0"
-https://doi.org/10.7916/tbgr-4j86. Accessed 10 March 2026.
+Derived from "GRID3 NGA - Settlement Extents v3.0" https://doi.org/10.7916/tbgr-4j86. Accessed 10 March 2026.
+
 Geographic extent: Nigeria (2.68° to 14.68° E, 4.27° to 13.89° N)
+
 Feature count: 745,191
 
 Technical specifications:
@@ -68,26 +68,14 @@ License: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)
 
 Public URL: https://dev.ciesin.app/tiles/grid3/cod/GRID3_COD_health_facilities_v8_0.pmtiles
 
-Description:
-The GRID3 COD - Health Facilities v8.0 dataset consists of health facility points with name, location, health zone, and health area, among other attributes, for all the twenty-six provinces in the Democratic Republic of the Congo (COD).
+*The GRID3 COD - Health Facilities v8.0 dataset consists of health facility points with name, location, health zone, and health area, among other attributes, for all the twenty-six provinces in the Democratic Republic of the Congo (COD).*
 
-Province group 1: Haut-Katanga, Kasaï, Kasaï-Oriental, Kinshasa, and Lomami
-Province group 2: Haut-Lomami and Tanganyika
-Province group 3: Ituri and Kwilu
-Province group 4: Maniema
-Province group 5: Kasaï-Central
-Province group 6: Tshopo and Mongala
-Province group 7: Sankuru
-Province group 8: Kongo-Central
-Province group 9: Lualaba, Mai-Ndombe, Sud-Ubangi, Tshuapa
-Province group 10: Equateur, Nord-Ubangi, Sud-Kivu
-Province group 11: Bas-Uele, Haut-Uele, Kwango, and Nord-Kivu
+*This operational dataset has not been fully validated by government officials or ministries.*
 
-This operational dataset has not been fully validated by government officials or ministries.
+Derived from "GRID3 COD - Health Facilities v8.0" https://doi.org/10.7916/f1ft-y872. Accessed 10 March 2026.
 
-Derived from: "GRID3 COD - Health Facilities v8.0"
-https://doi.org/10.7916/f1ft-y872. Accessed 10 March 2026.
 Geographic extent: Democratic Republic of the Congo (12.29° to 31.27° E, -13.26° to 5.13° N)
+
 Feature count: 38,049
 
 Technical specifications:
@@ -116,26 +104,14 @@ License: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)
 
 Public URL: https://dev.ciesin.app/tiles/grid3/cod/GRID3_COD_settlement_names_v8_0.pmtiles
 
-Description:
-The GRID3 COD - Settlement Names v8.0 dataset consists of settlement points with name and attributes for all the twenty-six provinces in the Democratic Republic of the Congo (COD).
+*The GRID3 COD - Settlement Names v8.0 dataset consists of settlement points with name and attributes for all the twenty-six provinces in the Democratic Republic of the Congo (COD).*
 
-Province group 1: Haut-Katanga, Kasaï, Kasaï-Oriental, Kinshasa, and Lomami
-Province group 2: Haut-Lomami and Tanganyika
-Province group 3: Ituri and Kwilu
-Province group 4: Maniema
-Province group 5: Kasaï-Central
-Province group 6: Tshopo and Mongala
-Province group 7: Sankuru
-Province group 8: Kongo-Central
-Province group 9: Lualaba, Mai-Ndombe, Sud-Ubangi, Tshuapa
-Province group 10: Equateur, Nord-Ubangi, Sud-Kivu
-Province group 11: Bas-Uele, Haut-Uele, Kwango, and Nord-Kivu
+*This operational dataset has not been fully validated by government officials or ministries.*
 
-This operational dataset has not been fully validated by government officials or ministries.
+Derived from "GRID3 COD - Settlement Names v8.0" https://doi.org/10.7916/qpnw-1c89. Accessed 10 March 2026.
 
-Derived from: "GRID3 COD - Settlement Names v8.0"
-https://doi.org/10.7916/qpnw-1c89. Accessed 10 March 2026.
 Geographic extent: Democratic Republic of the Congo (12.22° to 31.26° E, -13.38° to 5.14° N)
+
 Feature count: 127,942
 
 Technical specifications:
@@ -164,12 +140,12 @@ License: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)
 
 Public URL: https://dev.ciesin.app/tiles/grid3/cod/GRID3_COD_health_areas_v8_0.pmtiles
 
-Description:
 *The GRID3 COD - Health Areas v8.0 dataset consists of health area polygons with health area name, health zone, and province attributes for all twenty-six provinces in the Democratic Republic of the Congo (COD). The dataset covers 517 health zones across 26 provinces.*
 
-Derived from: "GRID3 COD - Health Areas v8.0"
-https://doi.org/10.7916/kcq9-7s03. Accessed 10 March 2026.
+Derived from "GRID3 COD - Health Areas v8.0" https://doi.org/10.7916/kcq9-7s03. Accessed 10 March 2026.
+
 Geographic extent: Democratic Republic of the Congo (12.20° to 31.28° E, -13.46° to 5.39° N)
+
 Feature count: 9,658
 
 Technical specifications:
@@ -198,12 +174,12 @@ License: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)
 
 Public URL: https://dev.ciesin.app/tiles/grid3/cod/GRID3_COD_health_zones_v8_0.pmtiles
 
-Description:
 *The GRID3 COD - Health Zones v8.0 dataset consists of health zone boundary polygons with health zone name and province attributes for all twenty-six provinces in the Democratic Republic of the Congo (COD).*
 
-Derived from: "GRID3 COD - Health Zones v8.0"
-https://doi.org/10.7916/asa4-jc67. Accessed 10 March 2026.
+Derived from "GRID3 COD - Health Zones v8.0" https://doi.org/10.7916/asa4-jc67. Accessed 10 March 2026.
+
 Geographic extent: Democratic Republic of the Congo (12.20° to 31.28° E, -13.46° to 5.39° N)
+
 Feature count: 519
 
 Technical specifications:
@@ -232,12 +208,12 @@ License: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)
 
 Public URL: https://dev.ciesin.app/tiles/grid3/cod/GRID3_COD_settlement_extents_v3_1.pmtiles
 
-Description:
 *The GRID3 COD - Settlement Extents v3.1 consists of a geographic representation of settlements in the Democratic Republic of the Congo, in two forms: 1) settlement polygons, and 2) spatial points depicting the centroids of settled grid cells at 3-arc seconds (or ~100 meters) contained within settlement polygons.*
 
-Derived from: "GRID3 COD - Settlement Extents v3.1"
-https://doi.org/10.7916/d6gy-yh28. Accessed 29 May 2026.
+Derived from "GRID3 COD - Settlement Extents v3.1" https://doi.org/10.7916/d6gy-yh28. Accessed 29 May 2026.
+
 Geographic extent: Democratic Republic of the Congo (12.20° to 31.28° E, -13.44° to 5.25° N)
+
 Feature count: 572,537
 
 Technical specifications:
@@ -268,7 +244,6 @@ License: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)
 
 Public URL: https://dev.ciesin.app/tiles/base.pmtiles
 
-Description:
 *Global vector basemap derived from OpenStreetMap and Natural Earth data. Accessed from https://maps.protomaps.com/builds/ 28 April 2026. Protomaps basemap version 4.14.5*
 
 Source: © OpenStreetMap contributors (https://www.openstreetmap.org/©)
@@ -300,8 +275,7 @@ License: ODbL (Open Database License) (https://www.openstreetmap.org/copyright)
 
 Public URL: https://dev.ciesin.app/tiles/overture/buildings.pmtiles
 
-Description:
-Global building footprints from the Overture Maps Foundation, incorporating OpenStreetMap data. Generated using Overture Maps Planetiler profile (https://github.com/OvertureMaps/overture-tiles). Build date: May 20, 2026.
+*Global building footprints from the Overture Maps Foundation, incorporating OpenStreetMap data. Generated using Overture Maps Planetiler profile (https://github.com/OvertureMaps/overture-tiles). Build date: May 20, 2026.*
 
 Source: © Overture Maps Foundation (https://overturemaps.org)
 Source: © OpenStreetMap contributors (https://www.openstreetmap.org/copyright)
@@ -327,8 +301,7 @@ License: CDLA-Permissive-2.0 (https://docs.overturemaps.org/attribution)
 
 Public URL: https://dev.ciesin.app/tiles/terrain.pmtiles
 
-Description:
-30-meter resolution Digital Elevation Model (DEM) covering the Africa, provided by Mapterhorn. Used to render hillshade and dynamically generated vector contours in the application.
+*30-meter resolution Digital Elevation Model (DEM) covering the Africa, provided by Mapterhorn. Used to render hillshade and dynamically generated vector contours in the application.*
 
 Source: Mapterhorn (https://mapterhorn.com)
 Geographic extent: Africa (-18.8° to 51.8° E, -35.4° to 37.5° N)
