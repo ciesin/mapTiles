@@ -600,9 +600,9 @@
 					[
 						"zoom"
 					],
-					14,
+					13,
 					0,
-					15,
+					14,
 					0.5
 				]
 			}
@@ -10747,7 +10747,7 @@
 					[
 						"zoom"
 					],
-					11,
+					12,
 					0,
 					13,
 					1,
@@ -11131,6 +11131,16 @@
 			"source-layer": "GRID3-COD-airesante-v8-0-centroids",
 			"minzoom": 9,
 			"layout": {
+				"text-variable-anchor": [
+					"step",
+					["zoom"],
+					["literal", ["top", "bottom", "left", "right", "top-left", "top-right", "bottom-left", "bottom-right"]],
+					13,
+					["literal", ["center"]]
+				],
+				"text-radial-offset": 0.4,
+				"text-justify": "auto",
+				"symbol-sort-key": ["*", -1, ["sqrt", ["get", "Shape__Area"]]],
 				"text-field": [
 					"step",
 					[
@@ -11286,6 +11296,16 @@
 			"source-layer": "GRID3-COD-zonesante-v8-0-centroids",
 			"minzoom": 7,
 			"layout": {
+				"text-variable-anchor": [
+					"step",
+					["zoom"],
+					["literal", ["top", "bottom", "left", "right", "top-left", "top-right", "bottom-left", "bottom-right"]],
+					11,
+					["literal", ["center"]]
+				],
+				"text-radial-offset": 0.5,
+				"text-justify": "auto",
+				"symbol-sort-key": ["*", -1, ["sqrt", ["get", "Shape__Area"]]],
 				"text-field": [
 					"step",
 					[
@@ -11487,7 +11507,7 @@
 				"text-halo-width": 1.5
 			}
 		},
-						{
+		{
 			"id": "places_locality",
 			"type": "symbol",
 			"source": "protomaps_base",
@@ -12672,7 +12692,7 @@
 						"zoom"
 					],
 					10,
-					9,
+					8,
 					14,
 					10,
 					18,
@@ -12687,7 +12707,7 @@
 						"zoom"
 					],
 					10,
-					7.5,
+					9,
 					14,
 					10,
 					18,
@@ -12843,6 +12863,15 @@
 			"minzoom": 5,
 			"maxzoom": 10,
 			"layout": {
+				"text-variable-anchor": [
+					"step",
+					["zoom"],
+					["literal", ["top", "bottom", "left", "right", "top-left", "top-right", "bottom-left", "bottom-right"]],
+					8,
+					["literal", ["center"]]
+				],
+				"text-radial-offset": 0.6,
+				"text-justify": "auto",
 				"text-field": ["get", "province"],
 				"text-font": ["Noto Sans Medium"],
 				"text-size": [
