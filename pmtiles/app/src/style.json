@@ -10,7 +10,7 @@
 			"attribution": "",
 			"tiles": []
 		},
-		"protomaps_base": {
+		"overture_base": {
 			"type": "vector",
 			"attribution": "",
 			"tiles": []
@@ -11899,7 +11899,7 @@
 			"source": "grid3_cod_boundaries",
 			"source-layer": "GRID3-COD-airesante-v8-0",
 			"minzoom": 8,
-			"maxzoom": 13.5,
+			"maxzoom": 13,
 			"paint": {
 				"line-color": [
 					"interpolate",
@@ -11925,9 +11925,7 @@
 					8,
 					0,
 					12.9,
-					1.2,
-					13,
-					0
+					1.2
 				],
 				"line-opacity": [
 					"step",
@@ -11938,11 +11936,7 @@
 					8,
 					0.3,
 					10,
-					0.5,
-					13,
-					0.3,
-					13.5,
-					0
+					0.5
 				]
 			}
 		},
@@ -11951,7 +11945,7 @@
 			"type": "line",
 			"source": "grid3_cod_boundaries",
 			"source-layer": "GRID3-COD-airesante-v8-0",
-			"minzoom": 12,
+			"minzoom": 13,
 			"paint": {
 				"line-color": "#fff",
 				"line-width": [
@@ -11962,22 +11956,16 @@
 					[
 						"zoom"
 					],
-					12.9,
-					0,
 					13,
 					1,
 					14,
 					2
 				],
 				"line-opacity": [
-					"interpolate",
-					[
-						"linear"
-					],
+					"step",
 					[
 						"zoom"
 					],
-					12.9,
 					0,
 					13,
 					1
@@ -11989,7 +11977,7 @@
 			"type": "line",
 			"source": "grid3_cod_boundaries",
 			"source-layer": "GRID3-COD-airesante-v8-0",
-			"minzoom": 12.5,
+			"minzoom": 13,
 			"paint": {
 				"line-color": "#FF5722",
 				"line-width": [
@@ -12000,10 +11988,8 @@
 					[
 						"zoom"
 					],
-					12.5,
-					0,
-					12.75,
-					0.5,
+					13,
+					1,
 					14,
 					1.5
 				],
@@ -12017,8 +12003,6 @@
 						"zoom"
 					],
 					0,
-					12.75,
-					0.5,
 					13,
 					1
 				]
@@ -12046,32 +12030,57 @@
 				"text-size": [
 					"interpolate",
 					[
-						"linear"
+						"exponential",
+						1.2
 					],
 					[
 						"zoom"
 					],
-					8,
 					7,
-					14,
-					9,
-					18,
-					12
+					7,
+					20,
+					18
 				],
-				"text-max-angle": 30,
-				"text-padding": 25,
+				"text-padding": [
+					"interpolate",
+					[
+						"linear"
+					],	
+					[
+						"zoom"
+					],
+					11,
+					4,
+					18,
+					8
+				],
 				"text-letter-spacing": 0.1,
 				"text-transform": "uppercase",
 				"text-offset": [
 					0,
 					1
 				],
-				"symbol-spacing": 500
+				"symbol-spacing": [		
+						"interpolate",
+					[
+						"linear"
+					],	
+					[
+						"zoom"
+					],
+					7,
+					250,
+					14,
+					500,
+					18,
+					1000
+					]
+				
 			},
 			"paint": {
-				"text-color": "#616161",
-				"text-halo-color": "#fafafe",
-				"text-halo-width": 1.8
+				"text-color": "#424242",
+				"text-halo-color": "#f5f5fa",
+				"text-halo-width": 1
 			}
 		},
 		{
@@ -12096,32 +12105,147 @@
 				"text-size": [
 					"interpolate",
 					[
-						"linear"
+						"exponential",
+						1.2
 					],
 					[
 						"zoom"
 					],
-					8,
 					7,
-					14,
-					9,
-					18,
-					12
+					7,
+					20,
+					18
 				],
-				"text-max-angle": 30,
-				"text-padding": 25,
+				"text-padding": [
+					"interpolate",
+					[
+						"linear"
+					],	
+					[
+						"zoom"
+					],
+					8,
+					4,
+					14,
+					6,
+					18,
+					10
+				],
 				"text-letter-spacing": 0.15,
 				"text-transform": "uppercase",
 				"text-offset": [
 					0,
 					1
 				],
-				"symbol-spacing": 500
+				"symbol-spacing": [		
+						"interpolate",
+					[
+						"linear"
+					],	
+					[
+						"zoom"
+					],
+					7,
+					250,
+					14,
+					500,
+					18,
+					1000
+					]
 			},
 			"paint": {
 				"text-color": "#424242",
 				"text-halo-color": "#f5f5fa",
-				"text-halo-width": 2
+				"text-halo-width": 1
+			}
+		},
+				{
+			"id": "cod-antenne-boundary-label",
+			"type": "symbol",
+			"source": "grid3_cod_boundaries",
+			"source-layer": "GRID3-COD-antenne-v8-0",
+			"minzoom": 7,
+			"maxzoom": 20,
+			"layout": {
+				"text-field": [
+					"concat",
+					"Antenne ",
+					[
+						"get",
+						"antenne"
+					]
+				],
+				"symbol-placement": "line",
+				"text-font": ["Noto Sans Medium"],
+				"text-size": [
+					"interpolate",
+					[
+						"exponential",
+						1.2
+					],
+					[
+						"zoom"
+					],
+					7,
+					7,
+					20,
+					18
+				],
+
+				"text-padding": [
+					"interpolate",
+					[
+						"linear"
+					],	
+					[
+						"zoom"
+					],
+					7,
+					4,
+					14,
+					6,
+					18,
+					10
+				],
+				"text-letter-spacing": 0.1,
+				"text-transform": "uppercase",
+				"text-offset": [
+					0,
+					1
+				],
+				"symbol-spacing": [		
+						"interpolate",
+					[
+						"linear"
+					],	
+					[
+						"zoom"
+					],
+					7,
+					250,
+					14,
+					500,
+					18,
+					1000
+					]
+			},
+			"paint": {
+				"text-color": "#424242",
+				"text-halo-color": "#f5f5fa",
+				"text-halo-width": 1,
+				"text-opacity": [
+					"interpolate",
+					[
+						"linear"
+					],
+					[
+						"zoom"
+					],
+					7,
+					0,
+					9,
+					1
+				]
 			}
 		},
 				{
@@ -12243,12 +12367,10 @@
 					[
 						"zoom"
 					],
-					10,
-					12,
-					13,
-					18,
+					9,
+					6,
 					16,
-					24
+					12
 				],
 				"text-max-width": 4,
 				"text-letter-spacing": [
@@ -12269,19 +12391,15 @@
 			},
 			"paint": {
 				"text-color": [
-					"interpolate",
-					[
-						"linear"
-					],
+					"step",
 					[
 						"zoom"
 					],
+					"#505759",
 					12,
-					"#7C878E",
-					12.05,
 					"#DD2C00"
 				],
-				"text-halo-color": "#f0f0f5",
+				"text-halo-color": "#f5f5fa",
 				"text-halo-width": 1.2
 			}
 		},
@@ -12305,7 +12423,7 @@
 							"zonesante"
 						]
 					],
-					11,
+					12,
 					[
 						"concat",
 						"",
@@ -12395,12 +12513,12 @@
 					[
 						"zoom"
 					],
-					8,
-					5,
+					7,
+					4,
 					12,
-					15,
+					8,
 					16,
-					20
+					12
 				],
 				"text-max-width": 8,
 				"text-letter-spacing": [
@@ -12421,16 +12539,12 @@
 			},
 			"paint": {
 				"text-color": [
-					"interpolate",
-					[
-						"linear"
-					],
+					"step",
 					[
 						"zoom"
 					],
-					12,
 					"#7C878E",
-					13,
+					12,
 					"#8246AF"
 				],
 				"text-halo-color": "#e8e8f2",
@@ -12463,16 +12577,18 @@
 					10,
 					7,
 					14,
-					8.5,
+					12,
 					18,
-					16
+					14
 				],
 				"text-padding": [
-					"step",
+					"interpolate",
+					[
+						"linear"
+					],
 					[
 						"zoom"
 					],
-					4,
 					10,
 					4,
 					14,
@@ -12523,24 +12639,26 @@
 						"zoom"
 					],
 					10,
-					8.5,
+					9,
 					14,
-					11,
+					12,
 					18,
 					18
 				],
 				"text-padding": [
-					"step",
+					"interpolate",
+					[
+						"linear"
+					],	
 					[
 						"zoom"
 					],
-					6,
 					10,
-					6,
+					7.5,
 					14,
-					8,
+					10,
 					18,
-					10
+					14
 				],
 				"text-max-width": 10,
 				"text-anchor": "bottom",
@@ -12606,7 +12724,19 @@
 					8,
 					14
 				],
-				"text-padding": 8,
+				"text-padding": [
+					"interpolate",
+					[
+						"linear"
+					],	
+					[
+						"zoom"
+					],
+					5,
+					4,
+					10,
+					8
+				],
 				"text-max-width": 8,
 				"text-letter-spacing": 0.2,
 				"text-transform": "uppercase"
@@ -12624,69 +12754,6 @@
 			8.5,
 			0
 			]
-			}
-		},
-		{
-			"id": "antenne-boundary-label",
-			"type": "symbol",
-			"source": "grid3_cod_boundaries",
-			"source-layer": "GRID3-COD-antenne-v8-0",
-			"minzoom": 7,
-			"maxzoom": 20,
-			"layout": {
-				"text-field": [
-					"concat",
-					"Antenne ",
-					[
-						"get",
-						"antenne"
-					]
-				],
-				"symbol-placement": "line",
-				"text-font": ["Noto Sans Medium"],
-				"text-size": [
-					"interpolate",
-					[
-						"exponential",
-						1.6
-					],
-					[
-						"zoom"
-					],
-					7,
-					6,
-					9,
-					8,
-					18,
-					12
-					],
-				"text-max-angle": 30,
-				"text-padding": 10,
-				"text-letter-spacing": 0.1,
-				"text-transform": "uppercase",
-				"text-offset": [
-					0,
-					1
-				],
-				"symbol-spacing": 500
-			},
-			"paint": {
-				"text-color": "#424242",
-				"text-halo-color": "#f5f5fa",
-				"text-halo-width": 1.5,
-				"text-opacity": [
-					"interpolate",
-					[
-						"linear"
-					],
-					[
-						"zoom"
-					],
-					9.5,
-					0,
-					10,
-					1
-				]
 			}
 		},
 		{
