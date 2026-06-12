@@ -661,7 +661,7 @@
 				"industrial"
 			],
 			"paint": {
-				"fill-color": "#C8C9C7"
+				"fill-color": "#B2A8A2"
 			}
 		},
 		{
@@ -2046,9 +2046,9 @@
 						"zoom"
 					],
 					10,
-					0,
-					11.5,
 					0.5,
+					11.5,
+					1,
 					15,
 					2,
 					18,
@@ -2369,9 +2369,9 @@
 						"zoom"
 					],
 					10,
-					0,
-					11.5,
 					0.5,
+					11.5,
+					1,
 					15,
 					2,
 					18,
@@ -11469,7 +11469,7 @@
 						"zoom"
 					],
 					10,
-					7,
+					6.5,
 					14,
 					12,
 					18,
@@ -11484,7 +11484,7 @@
 						"zoom"
 					],
 					10,
-					4,
+					2,
 					14,
 					6,
 					18,
@@ -11500,7 +11500,7 @@
 						"zoom"
 					],
 					"#4B4F54",
-					13,
+					14,
 					"#263238"
 				],
 				"text-halo-color": "#ffffff",
@@ -12674,7 +12674,7 @@
 			"source": "GRID3_COD_POIs",
 			"source-layer": "GRID3-COD-health-facilities-v8-0",
 			"minzoom": 10,
-			"maxzoom": 13,
+			"maxzoom": 14,
 			"layout": {
 				"text-field": [
 					"get",
@@ -12759,7 +12759,7 @@
 			"type": "symbol",
 			"source": "GRID3_COD_POIs",
 			"source-layer": "GRID3-COD-health-facilities-v8-0",
-			"minzoom": 13,
+			"minzoom": 14,
 			"layout": {
 				"text-field": [
 					"get",
@@ -12839,10 +12839,10 @@
 					["get", "esstype"],
 					["Poste de Santé", "Clinique"],
 					"#3A5DAE",
-					["Centre de Santé", "Hôpital Général de Référence", "Centre Hopitalier", "Centre Médical"],
+					["Centre de Santé", "Hôpital Général de Référence", "Centre Hopitalier", "Hôpital", "Centre Médical"],
 					"#B44769",
 					"Centre de Santé de Référence",
-					"#F6EB61",
+					"#ffff00",
 					"#646464"
 				],
 				"text-halo-color": [
