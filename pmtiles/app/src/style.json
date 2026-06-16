@@ -13516,11 +13516,13 @@
 					"Noto Sans Regular"
 				],
 				"text-size": [
-					"step",
+					"interpolate",
+					[
+						"linear"
+					],
 					[
 						"zoom"
 					],
-					8.5,
 					10,
 					[
 						"*",
