@@ -97,7 +97,7 @@ export const SOURCES = {
   grid3_nga_settlement_extents: {
     archive: "tiles/grid3/nga/GRID3_NGA_settlement_extents",
     attribution: '<a href="https://ciesin.columbia.edu/">© CIESIN Columbia University</a>',
-    maxzoom: 16,
+    maxzoom: 15,
     ext: "mvt",
   },
 
