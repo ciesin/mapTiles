@@ -9,6 +9,7 @@ import {
   GlobeControl,
   Map as MaplibreMap,
   NavigationControl,
+  FullscreenControl,
   Popup,
   ScaleControl,
   getRTLTextPluginStatus,
@@ -283,7 +284,7 @@ function MapLibreView() {
     });
 
     map.addControl(new NavigationControl());
-    map.addControl(new GlobeControl());
+    // map.addControl(new GlobeControl());
     map.addControl(new AttributionInfoControl());
 
     // Add scale control at bottom-left
@@ -326,6 +327,9 @@ function MapLibreView() {
         },
       }),
     );
+
+    map.addControl(new FullscreenControl());
+
 
     // const popup = new Popup({
     //   closeButton: true,
