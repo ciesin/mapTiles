@@ -35,7 +35,7 @@
 			"attribution": "",
 			"tiles": []
 		},
-		"GRID3_COD_POIs": {
+		"grid3_cod_pois": {
 			"type": "vector",
 			"attribution": "",
 			"tiles": []
@@ -12065,7 +12065,7 @@
 		{
 			"id": "cod-settlement-names-label",
 			"type": "symbol",
-			"source": "GRID3_COD_POIs",
+			"source": "grid3_cod_pois",
 			"source-layer": "GRID3-COD-settlement-names-v8-0",
 			"minzoom": 10,
 			"layout": {
@@ -13286,7 +13286,7 @@
 		{
 			"id": "cod-health-facilities-label-early",
 			"type": "symbol",
-			"source": "GRID3_COD_POIs",
+			"source": "grid3_cod_pois",
 			"source-layer": "GRID3-COD-health-facilities-v8-0",
 			"minzoom": 10,
 			"maxzoom": 14,
@@ -13372,7 +13372,7 @@
 		{
 			"id": "cod-health-facilities-label",
 			"type": "symbol",
-			"source": "GRID3_COD_POIs",
+			"source": "grid3_cod_pois",
 			"source-layer": "GRID3-COD-health-facilities-v8-0",
 			"minzoom": 14,
 			"layout": {
