@@ -70,7 +70,7 @@ export const SOURCES = {
   grid3_nga: {
     archive: "tiles/grid3/nga/GRID3_NGA",
     attribution: '<a href="https://ciesin.columbia.edu/">© CIESIN Columbia University</a>',
-    maxzoom: 14,
+    maxzoom: 15,
     ext: "mvt",
   },
 
