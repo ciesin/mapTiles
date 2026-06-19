@@ -12660,8 +12660,23 @@
 				"text-letter-spacing": 0.1,
 				"text-transform": "uppercase",
 				"text-offset": [
-					0,
-					1
+					"step",
+					["zoom"],
+						[
+						"literal",
+						[0, 1]
+					],
+
+					7,
+					[
+						"literal",
+						[0, 1]
+					],
+					13,
+					[
+						"literal",
+						[0, 1.5]
+					]
 				],
 				"symbol-spacing": [
 					"interpolate",
@@ -12757,8 +12772,23 @@
 				"text-letter-spacing": 0.1,
 				"text-transform": "uppercase",
 				"text-offset": [
-					0,
-					1
+					"step",
+					["zoom"],
+						[
+						"literal",
+						[0, 1]
+					],
+
+					7,
+					[
+						"literal",
+						[0, 1]
+					],
+					13,
+					[
+						"literal",
+						[0, 1.5]
+					]
 				],
 				"symbol-spacing": [
 					"interpolate",
@@ -12843,8 +12873,23 @@
 				"text-letter-spacing": 0.15,
 				"text-transform": "uppercase",
 				"text-offset": [
-					0,
-					1
+					"step",
+					["zoom"],
+						[
+						"literal",
+						[0, 1]
+					],
+
+					7,
+					[
+						"literal",
+						[0, 1]
+					],
+					13,
+					[
+						"literal",
+						[0, 1.5]
+					]
 				],
 				"symbol-spacing": [
 					"interpolate",
