@@ -135,7 +135,7 @@
 				]
 			}
 		},
-				{
+		{
 			"id": "landuse_park",
 			"type": "fill",
 			"source": "protomaps_base",
@@ -607,7 +607,19 @@
 			],
 			"paint": {
 				"fill-color": "#9cd3b4",
-				"fill-opacity": 0.7
+				"fill-opacity": [
+					"interpolate",
+					[
+						"linear"
+					],
+					[
+						"zoom"
+					],
+					14,
+					1,
+					15,
+					0.5
+				]
 			}
 		},
 		{
@@ -633,6 +645,19 @@
 					"#FABBCB",
 					16,
 					"#e65c5c"
+				],
+				"fill-opacity": [
+					"interpolate",
+					[
+						"linear"
+					],
+					[
+						"zoom"
+					],
+					14,
+					1,
+					15,
+					0.5
 				]
 			}
 		},
@@ -647,7 +672,20 @@
 				"industrial"
 			],
 			"paint": {
-				"fill-color": "#B2A8A2"
+				"fill-color": "#B2A8A2",
+				"fill-opacity": [
+					"interpolate",
+					[
+						"linear"
+					],
+					[
+						"zoom"
+					],
+					12,
+					0.75,
+					13,
+					0.25
+				]
 			}
 		},
 		{
@@ -663,7 +701,18 @@
 				"college"
 			],
 			"paint": {
-				"fill-color": "#F8E08E"
+				"fill-color": "#F8E08E",
+				"fill-opacity": [
+					"step",
+					[
+						"zoom"
+					],
+					1,
+					14,
+					1,
+					15,
+					0.5
+				]
 			}
 		},
 		{
@@ -677,7 +726,20 @@
 				"beach"
 			],
 			"paint": {
-				"fill-color": "#e8e4d0"
+				"fill-color": "#e8e4d0",
+				"fill-opacity": [
+					"interpolate",
+					[
+						"linear"
+					],
+					[
+						"zoom"
+					],
+					14,
+					1,
+					15,
+					0.5
+				]
 			}
 		},
 		{
@@ -691,7 +753,20 @@
 				"zoo"
 			],
 			"paint": {
-				"fill-color": "#c6dcdc"
+				"fill-color": "#c6dcdc",
+				"fill-opacity": [
+					"interpolate",
+					[
+						"linear"
+					],
+					[
+						"zoom"
+					],
+					14,
+					1,
+					15,
+					0.5
+				]
 			}
 		},
 		{
@@ -705,7 +780,20 @@
 				"aerodrome"
 			],
 			"paint": {
-				"fill-color": "#dadbdf"
+				"fill-color": "#dadbdf",
+				"fill-opacity": [
+					"interpolate",
+					[
+						"linear"
+					],
+					[
+						"zoom"
+					],
+					14,
+					1,
+					15,
+					0.5
+				]
 			}
 		},
 		{
@@ -743,13 +831,35 @@
 			"type": "line",
 			"source": "grid3_nga",
 			"source-layer": "GRID3-NGA-settlement-blocks-v4-0",
-			"minzoom": 13,
-			"maxzoom": 20,
+			"minzoom": 15,
 			"layout": {
 				"visibility": "none"
 			},
 			"paint": {
-				"line-color": "#D5C2D8",
+				"line-color": [
+					"interpolate",
+					[
+						"linear"
+					],
+					[
+						"get",
+						"building_count_density_quantile_rank"
+					],
+					0,
+					"#F3E5F5",
+					0.167,
+					"#E1BEE7",
+					0.333,
+					"#CE93D8",
+					0.5,
+					"#BA68C8",
+					0.667,
+					"#8031A7",
+					0.833,
+					"#2E008B",
+					1,
+					"#24135F"
+				],
 				"line-width": [
 					"interpolate",
 					[
@@ -759,14 +869,10 @@
 					[
 						"zoom"
 					],
-					14,
+					15,
 					0,
-					16,
+					15.5,
 					1.5
-				],
-				"line-dasharray": [
-					1.5,
-					4.5
 				]
 			}
 		},
@@ -2740,9 +2846,9 @@
 						"zoom"
 					],
 					14,
-					"#BEC6C4",
+					"#A2ACAB",
 					15,
-					"#BEC6C4"
+					"#919D9D"
 				],
 				"fill-extrusion-height": [
 					"coalesce",
@@ -7350,7 +7456,7 @@
 				"text-halo-width": 1
 			}
 		},
-				{
+		{
 			"id": "water_waterway_label",
 			"type": "symbol",
 			"source": "protomaps_base",
@@ -10271,7 +10377,7 @@
 				"text-halo-width": 1.5
 			}
 		},
-				{
+		{
 			"id": "cod-provinces-boundary",
 			"type": "line",
 			"source": "grid3_cod",
@@ -10341,36 +10447,35 @@
 					6.5,
 					1.5
 				],
-				"line-dasharray": 
+				"line-dasharray": [
+					"step",
 					[
-						"step",
+						"zoom"
+					],
+					[
+						"literal",
 						[
-							"zoom"
-						],
-						[
-							"literal",
-							[
-								1,
-								0
-							]
-						],
-						5,
-						[
-							"literal",
-							[
-								2,
-								4
-							]
-						],
-						7,
-						[
-							"literal",
-							[
-								1,
-								0
-							]
+							1,
+							0
 						]
 					],
+					5,
+					[
+						"literal",
+						[
+							2,
+							4
+						]
+					],
+					7,
+					[
+						"literal",
+						[
+							1,
+							0
+						]
+					]
+				],
 				"line-opacity": [
 					"interpolate",
 					[
@@ -10555,7 +10660,6 @@
 					1.25,
 					15,
 					2
-
 				],
 				"line-dasharray": [
 					"step",
@@ -10565,27 +10669,26 @@
 					[
 						"literal",
 						[
-							1, 0
+							1,
+							0
 						]
 					],
-					
-						11,
-							[
-							"literal",
-							[
-								2,
-								4
-							]
-						],
-						13,
-							[
-							"literal",
-							[
-								4,
-								8
-							]
+					11,
+					[
+						"literal",
+						[
+							2,
+							4
 						]
-
+					],
+					13,
+					[
+						"literal",
+						[
+							4,
+							8
+						]
+					]
 				],
 				"line-opacity": [
 					"step",
@@ -12569,7 +12672,6 @@
 							"antenne"
 						]
 					]
-
 				],
 				"symbol-placement": "line",
 				"text-ignore-placement": false,
@@ -12669,7 +12771,6 @@
 							"airesante"
 						]
 					]
-
 				],
 				"text-font": [
 					"Noto Sans Regular"
@@ -12756,7 +12857,6 @@
 							"zonesante"
 						]
 					]
-
 				],
 				"text-font": [
 					"Noto Sans Medium"
@@ -14734,7 +14834,7 @@
 				]
 			}
 		},
-				{
+		{
 			"id": "places_country",
 			"type": "symbol",
 			"source": "protomaps_base",

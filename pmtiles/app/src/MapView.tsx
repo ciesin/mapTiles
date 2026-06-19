@@ -261,7 +261,8 @@ function MapLibreView() {
     demSource.setupMaplibre(maplibregl);
 
     // const drcBounds: LngLatBoundsLike = [[8, -13], [35, 9]];
-    const africaBounds: LngLatBoundsLike = [[-33.8, -47.5], [71.8, 45.9]];
+    // Updated extent: WEST, SOUTH, EAST, NORTH
+    const africaBounds: LngLatBoundsLike = [[-18.1, -35.1], [51.6, 37.4]];
 
     // Get style with contours
     const style = getMaplibreStyle(demSource);
