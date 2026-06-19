@@ -34,12 +34,12 @@ import { SOURCES, type SourceKey } from "./sources";
 import baseStyle from "./style.json";
 
 // Light configuration for 3D features
-const LIGHT_CONFIG = {
-  anchor: "map" as const, // 'viewport' or 'map'
-  position: [240, 15, 45] as [number, number, number], // [radial, azimuthal, polar] in degrees
-  color: "#ffffff",
-  intensity: 0.15, // 0 to 1
-};
+// const LIGHT_CONFIG = {
+//   anchor: "map" as const, // 'viewport' or 'map'
+//   position: [240, 15, 45] as [number, number, number], // [radial, azimuthal, polar] in degrees
+//   color: "#ffffff",
+//   intensity: 0.15, // 0 to 1
+// };
 
 // function getSourceLayer(l: LayerSpecification): string {
 //   if ("source-layer" in l && l["source-layer"]) {
@@ -204,12 +204,12 @@ style.sources.contours = {
 };
 
   // Add global light source for 3D features
-  style.light = {
-    anchor: LIGHT_CONFIG.anchor,
-    position: LIGHT_CONFIG.position,
-    color: LIGHT_CONFIG.color,
-    intensity: LIGHT_CONFIG.intensity,
-  };
+  // style.light = {
+  //   anchor: LIGHT_CONFIG.anchor,
+  //   position: LIGHT_CONFIG.position,
+  //   color: LIGHT_CONFIG.color,
+  //   intensity: LIGHT_CONFIG.intensity,
+  // };
 
   return style;
 }

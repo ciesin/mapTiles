@@ -175,7 +175,9 @@
 					6,
 					0,
 					10,
-					1
+					1,
+					14,
+					0.5
 				],
 				"fill-antialias": false,
 				"fill-color": [
@@ -780,20 +782,8 @@
 				"aerodrome"
 			],
 			"paint": {
-				"fill-color": "#dadbdf",
-				"fill-opacity": [
-					"interpolate",
-					[
-						"linear"
-					],
-					[
-						"zoom"
-					],
-					14,
-					1,
-					15,
-					0.5
-				]
+				"fill-color": "#D0D0CE",
+				"fill-opacity": 1
 			}
 		},
 		{
@@ -2833,7 +2823,7 @@
 			"source-layer": "building",
 			"minzoom": 14,
 			"layout": {
-				"visibility": "visible"
+				"visibility": "none"
 			},
 			"paint": {
 				"fill-extrusion-color": [
@@ -2880,26 +2870,12 @@
 			"type": "fill",
 			"source": "overture_buildings",
 			"source-layer": "building",
-			"minzoom": 11,
-			"maxzoom": 15,
+			"minzoom": 14,
 			"layout": {
-				"visibility": "none"
+				"visibility": "visible"
 			},
 			"paint": {
-				"fill-color": [
-					"interpolate",
-					[
-						"exponential",
-						1.6
-					],
-					[
-						"zoom"
-					],
-					11,
-					"#EFBAE190",
-					15,
-					"#EBC6DF"
-				],
+				"fill-color": "#BBBCBC",
 				"fill-opacity": [
 					"interpolate",
 					[
@@ -2909,16 +2885,10 @@
 					[
 						"zoom"
 					],
-					11,
-					0,
-					12,
-					0.6,
-					13,
-					0.8,
 					14,
-					1,
+					0,
 					15,
-					0
+					1
 				]
 			}
 		},
@@ -10685,8 +10655,8 @@
 					[
 						"literal",
 						[
-							4,
-							8
+							1,
+							2
 						]
 					]
 				],
