@@ -160,7 +160,10 @@ export default {
 
       const r2Key = url.pathname.slice(1); // strip leading "/"
       const obj = await env.BUCKET.get(r2Key);
-      if (!obj) return new Response("Not found", { status: 404 });
+      if (!obj) return new Response("Not found", {
+        status: 404,
+        headers: { "Access-Control-Allow-Origin": allowedOrigin || "*" },
+      });
 
       const dotExt = r2Key.split(".").pop() ?? "";
       const mime: Record<string, string> = {

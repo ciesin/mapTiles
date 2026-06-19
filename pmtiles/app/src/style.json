@@ -14137,105 +14137,18 @@
 			}
 		},
 		{
-			"id": "cod-health-facilities-label-early",
-			"type": "symbol",
-			"source": "grid3_cod",
-			"source-layer": "GRID3-COD-health-facilities-v8-0",
-			"minzoom": 10,
-			"maxzoom": 14,
-			"layout": {
-				"text-field": [
-					"get",
-					"essnom1"
-				],
-				"text-font": [
-					"Noto Sans Bold"
-				],
-				"text-optional": true,
-				"text-size": [
-					"interpolate",
-					[
-						"linear"
-					],
-					[
-						"zoom"
-					],
-					10,
-					8,
-					14,
-					10,
-					18,
-					18
-				],
-				"text-padding": [
-					"interpolate",
-					[
-						"linear"
-					],
-					[
-						"zoom"
-					],
-					10,
-					9,
-					14,
-					10,
-					18,
-					14
-				],
-				"text-max-width": [
-					"interpolate",
-					[
-						"exponential",
-						1.2
-					],
-					[
-						"zoom"
-					],
-					10,
-					3,
-					18,
-					8
-				],
-				"text-anchor": "bottom",
-				"text-offset": [
-					0,
-					-0.5
-				],
-				"icon-image": "maki:hospital",
-				"icon-size": [
-					"interpolate",
-					[
-						"linear"
-					],
-					[
-						"zoom"
-					],
-					10,
-					0.2,
-					18,
-					1.2
-				],
-				"icon-optional": true
-			},
-			"paint": {
-				"text-color": "#717C7D",
-				"text-halo-color": "#ffffff",
-				"text-halo-width": 1
-			}
-		},
-		{
 			"id": "cod-health-facilities-label",
 			"type": "symbol",
 			"source": "grid3_cod",
 			"source-layer": "GRID3-COD-health-facilities-v8-0",
-			"minzoom": 14,
+			"minzoom": 8,
 			"layout": {
 				"text-field": [
 					"get",
 					"essnom1"
 				],
 				"text-font": [
-					"Noto Sans Bold"
+					"Noto Sans Medium"
 				],
 				"text-optional": true,
 				"text-size": [
@@ -14246,8 +14159,10 @@
 					[
 						"zoom"
 					],
+					9.5,
+					0,
 					10,
-					9,
+					8,
 					14,
 					12,
 					18,
@@ -14262,7 +14177,7 @@
 						"zoom"
 					],
 					10,
-					7.5,
+					9,
 					14,
 					8,
 					18,
@@ -14292,13 +14207,14 @@
 				"icon-size": [
 					"interpolate",
 					[
-						"linear"
+						"exponential",
+						1.2
 					],
 					[
 						"zoom"
 					],
 					10,
-					0.2,
+					0.4,
 					18,
 					1.2
 				],
@@ -14306,39 +14222,86 @@
 			},
 			"paint": {
 				"text-color": [
-					"match",
+					"step",
 					[
-						"get",
-						"esstype"
+						"zoom"
 					],
+					"#717C7D",
+					14,
 					[
-						"Poste de Santé",
-						"Clinique"
-					],
-					"#3A5DAE",
-					[
-						"Centre de Santé",
-						"Hôpital Général de Référence",
-						"Centre Hopitalier",
-						"Hôpital",
-						"Centre Médical"
-					],
-					"#B44769",
-					"Centre de Santé de Référence",
-					"#ffff00",
-					"#646464"
+						"match",
+						[
+							"get",
+							"esstype"
+						],
+						[
+							"Poste de Santé",
+							"Clinique"
+						],
+						"#3A5DAE",
+						[
+							"Centre de Santé",
+							"Hôpital Général de Référence",
+							"Centre Hopitalier",
+							"Hôpital",
+							"Centre Médical"
+						],
+						"#B44769",
+						"Centre de Santé de Référence",
+						"#ffff00",
+						"#646464"
+					]
 				],
 				"text-halo-color": [
-					"match",
+					"step",
 					[
-						"get",
-						"esstype"
+						"zoom"
 					],
-					"Centre de Santé de Référence",
-					"#53565A",
-					"#ffffff"
+					"#ffffff",
+					14,
+					[
+						"match",
+						[
+							"get",
+							"esstype"
+						],
+						"Centre de Santé de Référence",
+						"#53565A",
+						"#ffffff"
+					]
 				],
-				"text-halo-width": 1.25
+				"text-halo-width": [
+					"step",
+					[
+						"zoom"
+					],
+					1,
+					14,
+					1.25
+				],
+				"icon-color": [
+						"match",
+						[
+							"get",
+							"esstype"
+						],
+						[
+							"Poste de Santé",
+							"Clinique"
+						],
+						"#3A5DAE",
+						[
+							"Centre de Santé",
+							"Hôpital Général de Référence",
+							"Centre Hopitalier",
+							"Hôpital",
+							"Centre Médical"
+						],
+						"#B44769",
+						"Centre de Santé de Référence",
+						"#ffff00",
+						"#646464"
+					]
 			}
 		},
 		{
