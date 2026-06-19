@@ -1,0 +1,63 @@
+---
+# Martin tileserver configuration
+# Serves PMTiles archives synced locally from Cloudflare R2.
+# Source IDs match the keys in pmtiles/app/src/sources.ts so
+# martin/style.json works without any further edits.
+#
+# Run:  make start   (from the martin/ directory)
+# Sync: make sync    (pull latest PMTiles from R2 first)
+
+listen_addresses:
+  - "0.0.0.0:3000"
+
+# Tile cache size in MB
+cache_size: 256
+
+# CORS — allow ArcGIS Pro and MapLibre viewers on the same machine
+cors:
+  - "*"
+
+pmtiles:
+  sources:
+    # ── Base layers ──────────────────────────────────────────────────────────
+    protomaps_base:
+      path: /data/tiles/base.pmtiles
+
+    overture_base:
+      path: /data/tiles/overture/base.pmtiles
+
+    overture_buildings:
+      path: /data/tiles/overture/buildings.pmtiles
+
+    # ── GRID3 consolidated (Africa) ──────────────────────────────────────────
+    grid3:
+      path: /data/tiles/grid3.pmtiles
+
+    # ── GRID3 — COD (Democratic Republic of Congo) ───────────────────────────
+    grid3_cod:
+      path: /data/tiles/grid3/cod/GRID3_COD.pmtiles
+
+    grid3_cod_boundaries:
+      path: /data/tiles/grid3/cod/GRID3_COD_boundaries.pmtiles
+
+    grid3_cod_pois:
+      path: /data/tiles/grid3/cod/GRID3_COD_POIs.pmtiles
+
+    grid3_cod_settlement_extents:
+      path: /data/tiles/grid3/cod/GRID3_COD_settlement_extents.pmtiles
+
+    # ── GRID3 — NGA (Nigeria) ────────────────────────────────────────────────
+    grid3_nga:
+      path: /data/tiles/grid3/nga/GRID3_NGA.pmtiles
+
+    grid3_nga_boundaries:
+      path: /data/tiles/grid3/nga/GRID3_NGA_boundaries.pmtiles
+
+    grid3_nga_settlement_extents:
+      path: /data/tiles/grid3/nga/GRID3_NGA_settlement_extents.pmtiles
+
+    # ── Terrain (raster webp) ─────────────────────────────────────────────────
+    # Included for completeness; ArcGIS Pro cannot use this as a hillshade DEM.
+    # Uncomment if you need to inspect terrain tiles via the catalog.
+    # terrain:
+    #   path: /data/tiles/terrain.pmtiles
