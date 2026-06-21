@@ -12833,6 +12833,122 @@
 				]
 			}
 		},
+				{
+			"id": "cod-province-boundary-label",
+			"type": "symbol",
+			"source": "grid3_cod",
+			"source-layer": "GRID3-COD-province-v8-0",
+			"minzoom": 8.5,
+			"layout": {
+				"text-field": [
+					"step",
+					[
+						"zoom"
+					],
+					[
+						"concat",
+						"",
+						[
+							"get",
+							"province"
+						]
+					],
+					13,
+					[
+						"concat",
+						"Province ",
+						[
+							"get",
+							"province"
+						]
+					]
+				],
+				"symbol-placement": "line",
+				"text-ignore-placement": false,
+				"text-font": [
+					"Noto Sans Medium"
+				],
+				"text-size": [
+					"interpolate",
+					[
+						"exponential",
+						1.2
+					],
+					[
+						"zoom"
+					],
+					7,
+					6,
+					14,
+					16,
+					20,
+					24
+				],
+				"text-padding": 1,
+				"text-letter-spacing": 0.1,
+				"text-transform": "uppercase",
+				"text-offset": [
+					"step",
+					[
+						"zoom"
+					],
+					[
+						"literal",
+						[
+							0,
+							1
+						]
+					],
+					7,
+					[
+						"literal",
+						[
+							0,
+							0.75
+						]
+					],
+					13,
+					[
+						"literal",
+						[
+							0,
+							1
+						]
+					]
+				],
+				"symbol-spacing": [
+					"interpolate",
+					[
+						"linear"
+					],
+					[
+						"zoom"
+					],
+					8.5,
+					200,
+					18,
+					500
+				]
+			},
+			"paint": {
+				"text-color": "#424242",
+				"text-halo-color": "#f5f5fa",
+				"text-halo-width": 1,
+				"text-opacity": [
+					"interpolate",
+					[
+						"linear"
+					],
+					[
+						"zoom"
+					],
+					7,
+					0,
+					9,
+					1
+				]
+			}
+		},
 		{
 			"id": "cod-health-areas-boundary-label",
 			"type": "symbol",
