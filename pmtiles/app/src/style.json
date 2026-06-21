@@ -1883,128 +1883,12 @@
 			}
 		},
 		{
-			"id": "grid3-cod-tracks-casing",
-			"type": "line",
-			"source": "grid3_cod_tracks",
-			"source-layer": "roads",
-			"layout": {
-				"visibility": "visible"
-			},
-			"paint": {
-				"line-color": [
-					"interpolate",
-					[
-						"exponential",
-						1.9
-					],
-					[
-						"zoom"
-					],
-					12,
-					"#fff",
-					14,
-					"#e1e1e1"
-				],
-				"line-gap-width": [
-					"interpolate",
-					[
-						"exponential",
-						1.2
-					],
-					[
-						"zoom"
-					],
-					13,
-					0,
-					14,
-					1,
-					18,
-					4
-				],
-				"line-width": [
-					"interpolate",
-					[
-						"exponential",
-						1.2
-					],
-					[
-						"zoom"
-					],
-					13,
-					0,
-					18,
-					3
-				]
-			}
-		},
-				{
-			"id": "grid3-cod-tracks",
-			"type": "line",
-			"source": "grid3_cod_tracks",
-			"source-layer": "roads",
-			"minzoom": 10,
-			"paint": {
-				"line-color": [
-					"interpolate",
-					[
-						"exponential",
-						1.9
-					],
-					[
-						"zoom"
-					],
-					12,
-					"#B2B4B2",
-					14,
-					"#898D8D"
-				],
-				"line-dasharray": [
-					"step",
-					[
-						"zoom"
-					],
-					[
-						"literal",
-						[
-							1,
-							2
-						]
-					],
-					11,
-					[
-						"literal",
-						[
-							2,
-							1
-						]
-					]
-				],
-				"line-width": [
-					"interpolate",
-					[
-						"exponential",
-						1.8
-					],
-					[
-						"zoom"
-					],
-					10,
-					0.1,
-					11.5,
-					1,
-					18,
-					1.5
-				],
-				"line-opacity": 1
-			}
-		},
-		{
-			"id": "roads_other",
+			"id": "roads_other_casing",
 			"type": "line",
 			"source": "protomaps_base",
 			"source-layer": "roads",
 			"layout": {
-				"visibility": "none"
+				"visibility": "visible"
 			},
 			"filter": [
 				"all",
@@ -2038,72 +1922,106 @@
 					[
 						"zoom"
 					],
-					11,
-					"#9E9E9E",
-					14,
-					"#919D9D"
+					18,
+					"#BABBB1"
+
 				],
-				"line-dasharray": [
-					2,
-					2,
-					1,
-					2
+				"line-gap-width": [
+					"interpolate",
+					[
+						"exponential",
+						1.6
+					],
+					[
+						"zoom"
+					],
+					10,
+					0.5,
+					18,
+					6
 				],
+				
 				"line-width": [
 					"interpolate",
 					[
 						"exponential",
-						1.2
+						1.6
 					],
 					[
 						"zoom"
 					],
-					12,
-					0.75,
-					12.25,
-					1,
-					18,
-					1.5
-				],
-				"line-opacity": [
-					"interpolate",
-					[
-						"exponential",
-						1.2
-					],
-					[
-						"zoom"
-					],
-					12,
+					10,
 					0,
-					12.25,
-					1
+					18,
+					1.3
 				]
 			}
 		},
 		{
-			"id": "roads_pier",
+			"id": "roads_other",
 			"type": "line",
 			"source": "protomaps_base",
 			"source-layer": "roads",
+			"layout": {
+				"visibility": "visible"
+			},
 			"filter": [
-				"==",
-				"kind_detail",
-				"pier"
+				"all",
+				[
+					"!has",
+					"is_tunnel"
+				],
+				[
+					"!has",
+					"is_bridge"
+				],
+				[
+					"in",
+					"kind",
+					"other",
+					"path"
+				],
+				[
+					"!=",
+					"kind_detail",
+					"pier"
+				]
 			],
 			"paint": {
 				"line-color": [
 					"interpolate",
 					[
-						"linear"
+						"exponential",
+						1.6
 					],
 					[
 						"zoom"
 					],
-					14,
-					"#000",
+					15,
+					"#fff",
 					16,
-					"#e0e0e0"
+					"#ebebeb"
+				],
+				"line-dasharray": [
+					"step",
+					[
+						"zoom"
+					],
+					[
+						"literal",
+						[
+							1,
+							1
+						]
+					],
+					16,
+					[
+						"literal",
+						[
+							1,
+							0
+						]
+					]
 				],
 				"line-width": [
 					"interpolate",
@@ -2114,15 +2032,124 @@
 					[
 						"zoom"
 					],
-					12,
-					0,
-					12.5,
+					10,
 					0.5,
-					20,
-					16
+					18,
+					4
 				]
 			}
 		},
+				{
+			"id": "grid3-cod-tracks-casing",
+			"type": "line",
+			"source": "grid3_cod_tracks",
+			"source-layer": "roads",
+			"layout": {
+				"visibility": "visible"
+			},
+			"paint": {
+				"line-color": [
+					"interpolate",
+					[
+						"exponential",
+						1.6
+					],
+					[
+						"zoom"
+					],
+					18,
+					"#BABBB1"
+
+				],
+				"line-gap-width": [
+					"interpolate",
+					[
+						"exponential",
+						1.6
+					],
+					[
+						"zoom"
+					],
+					10,
+					0.5,
+					18,
+					6
+				],
+				"line-width": [
+					"interpolate",
+					[
+						"exponential",
+						1.6
+					],
+					[
+						"zoom"
+					],
+					10,
+					0,
+					18,
+					1
+				]
+			}
+		},
+		{
+			"id": "grid3-cod-tracks",
+			"type": "line",
+			"source": "grid3_cod_tracks",
+			"source-layer": "roads",
+			"minzoom": 10,
+			"paint": {
+				"line-color": [
+					"interpolate",
+					[
+						"exponential",
+						1.6
+					],
+					[
+						"zoom"
+					],
+					15,
+					"#fff",
+					16,
+					"#ebebeb"
+				],
+				"line-dasharray": [
+					"step",
+					[
+						"zoom"
+					],
+					[
+						"literal",
+						[
+							1,
+							1
+						]
+					],
+					16,
+					[
+						"literal",
+						[
+							1,
+							0
+						]
+					]
+				],
+				"line-width": [
+					"interpolate",
+					[
+						"exponential",
+						1.6
+					],
+					[
+						"zoom"
+					],
+					10,
+					0.5,
+					18,
+					4
+				]
+			}
+		},
+
 		{
 			"id": "roads_minor_service_casing",
 			"type": "line",
