@@ -185,8 +185,6 @@
 					6,
 					0,
 					10,
-					1,
-					14,
 					0.5
 				],
 				"fill-antialias": false,
@@ -230,7 +228,7 @@
 							]
 						]
 					],
-					"#ADDC91",
+					"#D9E1E2",
 					[
 						"in",
 						[
@@ -307,6 +305,8 @@
 					"rgba(255, 255, 255, 1)",
 					"shrub",
 					"#e9f4d7",
+					"forest",
+					"#d0ebbd", 
 					"#c8e5bd"
 				],
 				"fill-antialias": false,
@@ -314,7 +314,7 @@
 					"interpolate",
 					[
 						"exponential",
-						1.8
+						1.6
 					],
 					[
 						"zoom"
@@ -2080,9 +2080,17 @@
 				"visibility": "visible"
 			},
 			"filter": [
+				"all",
+				[
 					"in",
 					"class",
 					"track"
+				],
+				[
+					"!=",
+					"source_id",
+					"Overture / OSM"
+				]
 			],
 			"paint": {
 				"line-color": [
@@ -2133,9 +2141,17 @@
 			"source": "grid3_cod_roads",
 			"source-layer": "roads",
 			"filter": [
+				"all",
+				[
 					"in",
 					"class",
 					"track"
+				],
+				[
+					"!=",
+					"source_id",
+					"Overture / OSM"
+				]
 			],
 			"paint": {
 				"line-color": [
@@ -2611,17 +2627,19 @@
 				]
 			}
 		},
-				{
+		{
 			"id": "grid3-cod-roads-minor",
 			"type": "line",
 			"source": "grid3_cod_roads",
 			"source-layer": "roads",
-			"maxzoom": 13,
 			"filter": [
+				"all",
+				[
 					"in",
 					"class",
 					"unclassified",
 					"residential"
+				]
 			],
 			"paint": {
 				"line-color": [
@@ -2647,14 +2665,14 @@
 					[
 						"zoom"
 					],
-					11,
+					10,
 					0,
-					11.5,
-					0.75,
+					10.5,
+					0.25,
 					12,
 					0.75,
-					13,
-					0
+					16,
+					3
 				]
 			}
 		},
@@ -3107,7 +3125,7 @@
 					],
 					11,
 					"#83786F",
-					15,
+					14,
 					"#BABBB1"
 				],
 				"circle-radius": [
@@ -3122,7 +3140,7 @@
 					12,
 					0.75,
 					15,
-					1.75
+					1.5
 				],
 				"circle-opacity": 1
 			}
@@ -14531,9 +14549,9 @@
 					[
 						"zoom"
 					],
-					8.5,
+					9.5,
 					0,
-					9,
+					10,
 					7.5,
 					14,
 					12,
@@ -14622,15 +14640,15 @@
 					"interpolate",
 					[
 						"exponential",
-						1.2
+						1.6
 					],
 					[
 						"zoom"
 					],
 					10,
-					0.5,
-					16,
-					1.2,
+					0.6,
+					13,
+					1.4,
 					20,
 					2
 				],
