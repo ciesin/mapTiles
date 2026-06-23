@@ -2028,7 +2028,7 @@
 		{
 			"id": "grid3-cod-tracks-casing",
 			"type": "line",
-			"source": "grid3_cod",
+			"source": "grid3_cod_roads",
 			"source-layer": "GRID3-COD-roads-v1-0",
 			"minzoom": 16,
 			"layout": {
@@ -2074,7 +2074,7 @@
 		{
 			"id": "grid3-cod-tracks",
 			"type": "line",
-			"source": "grid3_cod",
+			"source": "grid3_cod_roads",
 			"minzoom": 11,
 			"source-layer": "GRID3-COD-roads-v1-0",
 			"filter": [
@@ -2606,7 +2606,7 @@
 				{
 			"id": "grid3-cod-roads-minor",
 			"type": "line",
-			"source": "grid3_cod",
+			"source": "grid3_cod_roads",
 			"source-layer": "GRID3-COD-roads-v1-0",
 			"minzoom": 11,
 			"filter": [
