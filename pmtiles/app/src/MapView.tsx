@@ -290,7 +290,9 @@ function MapLibreView() {
     map.addControl(new AttributionInfoControl());
 
     // Add scale control at bottom-left
-    map.addControl(new ScaleControl(), 'bottom-left');
+    map.addControl(new ScaleControl(
+      {maxWidth: 200, unit: 'metric'}
+    ), 'bottom-left');
 
     map.addControl(
       new AttributionControl({

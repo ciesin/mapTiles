@@ -46,26 +46,6 @@
 			"attribution": "",
 			"tiles": []
 		},
-		"grid3_cod_roads": {
-			"type": "vector",
-			"attribution": "",
-			"tiles": []
-		},
-		"grid3_cod_boundaries": {
-			"type": "vector",
-			"attribution": "",
-			"tiles": []
-		},
-		"grid3_cod_pois": {
-			"type": "vector",
-			"attribution": "",
-			"tiles": []
-		},
-		"grid3_cod_settlement_extents": {
-			"type": "vector",
-			"attribution": "",
-			"tiles": []
-		},
 		"dem": {
 			"type": "raster-dem",
 			"attribution": "",
@@ -470,7 +450,7 @@
 			"source": "grid3_nga",
 			"source-layer": "GRID3-NGA-settlement-extents-v4-0",
 			"minzoom": 7,
-			"maxzoom": 11,
+			"maxzoom": 14,
 			"layout": {
 				"visibility": "visible"
 			},
@@ -568,7 +548,7 @@
 						0.85,
 						0.85
 					],
-					11,
+					14,
 					[
 						"match",
 						[
@@ -606,37 +586,39 @@
 						"building_count_density_quantile_rank"
 					],
 					0,
-					"#F3E5F5",
-					0.167,
-					"#E1BEE7",
-					0.333,
-					"#CE93D8",
-					0.5,
-					"#BA68C8",
-					0.667,
-					"#8031A7",
-					0.833,
-					"#2E008B",
+					"#F9F5FB",
+					0.143,
+					"#F3E8F7",
+					0.286,
+					"#ECDDF2",
+					0.429,
+					"#E0CEEB",
+					0.571,
+					"#D4B8E0",
+					0.714,
+					"#BE8DD0",
+					0.857,
+					"#B070C0",
 					1,
-					"#24135F"
+					"#9F4FB0"
 				],
 				"fill-opacity": [
 					"interpolate",
 					[
 						"exponential",
-						2
+						1.7
 					],
 					[
 						"zoom"
 					],
 					10,
 					0,
-					11,
+					12,
 					0.25,
 					14,
 					0.5,
-					20,
-					0.75
+					18,
+					1
 				],
 				"fill-outline-color": "transparent"
 			}
@@ -2047,8 +2029,9 @@
 		{
 			"id": "grid3-cod-tracks-casing",
 			"type": "line",
-			"source": "grid3_cod_roads",
-			"source-layer": "roads",
+			"source": "grid3_cod",
+			"source-layer": "GRID3-COD-roads-v1-0",
+			"minzoom": 11,
 			"layout": {
 				"visibility": "visible"
 			},
@@ -2058,18 +2041,7 @@
 					"track"
 			],
 			"paint": {
-				"line-color": [
-					"interpolate",
-					[
-						"exponential",
-						1.6
-					],
-					[
-						"zoom"
-					],
-					18,
-					"#BABBB1"
-				],
+				"line-color": "#898D8D",
 				"line-gap-width": [
 					"interpolate",
 					[
@@ -2079,8 +2051,8 @@
 					[
 						"zoom"
 					],
-					10,
-					0.5,
+					11,
+					0,
 					18,
 					6
 				],
@@ -2103,8 +2075,9 @@
 		{
 			"id": "grid3-cod-tracks",
 			"type": "line",
-			"source": "grid3_cod_roads",
-			"source-layer": "roads",
+			"source": "grid3_cod",
+			"minzoom": 10,
+			"source-layer": "GRID3-COD-roads-v1-0",
 			"filter": [
 					"in",
 					"class",
@@ -2156,6 +2129,8 @@
 						"zoom"
 					],
 					10,
+					0,
+					11,
 					0.85,
 					18,
 					5
@@ -2589,6 +2564,7 @@
 			"type": "line",
 			"source": "grid3_nga_roads",
 			"source-layer": "roads",
+			"minzoom": 9,
 			"filter": [
 					"in",
 					"class",
@@ -2633,8 +2609,9 @@
 				{
 			"id": "grid3-cod-roads-minor",
 			"type": "line",
-			"source": "grid3_cod_roads",
-			"source-layer": "roads",
+			"source": "grid3_cod",
+			"source-layer": "GRID3-COD-roads-v1-0",
+			"minzoom": 11,
 			"filter": [
 					"in",
 					"class",
@@ -2667,9 +2644,9 @@
 					],
 					11,
 					0,
-					11.5,
-					0.5,
 					12,
+					0.25,
+					14,
 					0.75,
 					18,
 					6
@@ -3055,55 +3032,6 @@
 			}
 		},
 		{
-			"id": "buildings-extrusion",
-			"type": "fill-extrusion",
-			"source": "overture_buildings",
-			"source-layer": "building",
-			"minzoom": 15,
-			"layout": {
-				"visibility": "none"
-			},
-			"paint": {
-				"fill-extrusion-color": [
-					"interpolate",
-					[
-						"exponential",
-						2
-					],
-					[
-						"zoom"
-					],
-					15,
-					"#A2ACAB",
-					16,
-					"#fff"
-				],
-				"fill-extrusion-height": [
-					"coalesce",
-					[
-						"get",
-						"height"
-					],
-					5
-				],
-				"fill-extrusion-base": 1,
-				"fill-extrusion-opacity": [
-					"interpolate",
-					[
-						"exponential",
-						1.6
-					],
-					[
-						"zoom"
-					],
-					14,
-					0,
-					14.5,
-					1
-				]
-			}
-		},
-		{
 			"id": "buildings-overview",
 			"type": "circle",
 			"source": "overture_buildings",
@@ -3126,7 +3054,7 @@
 					11,
 					"#83786F",
 					15,
-					"#C4BFB6"
+					"#A49C93" 
 				],
 				"circle-radius": [
 					"interpolate",
@@ -3140,7 +3068,7 @@
 					12,
 					0.75,
 					14.5,
-					1.25,
+					1.5,
 					15,
 					0
 				],
@@ -3154,21 +3082,12 @@
 			"source-layer": "building",
 			"minzoom": 14,
 			"layout": {
-				"visibility": "visible"
+				"visibility": "none"
 			},
 			"paint": {
-				"fill-color": [
-					"interpolate",
-					[
-						"exponential",
-						1.6
-					],
-					[
-						"zoom"
-					],
-					16,
-					"#C4BFB6"
-				],
+				"fill-color":
+					"#C7C9C7"
+				,
 				"fill-opacity": [
 					"interpolate",
 					[
@@ -3180,7 +3099,43 @@
 					],
 					14,
 					0,
-					14.5,
+					15,
+					1
+				]
+			}
+		},
+				{
+			"id": "buildings-extrusion",
+			"type": "fill-extrusion",
+			"source": "overture_buildings",
+			"source-layer": "building",
+			"minzoom": 14,
+			"layout": {
+				"visibility": "visible"
+			},
+			"paint": {
+				"fill-extrusion-color": "#C4BFB6",
+				"fill-extrusion-height": [
+					"coalesce",
+					[
+						"get",
+						"height"
+					],
+					5
+				],
+				"fill-extrusion-base": 1,
+				"fill-extrusion-opacity": [
+					"interpolate",
+					[
+						"exponential",
+						1.6
+					],
+					[
+						"zoom"
+					],
+					14,
+					0,
+					14.75,
 					1
 				]
 			}
@@ -14610,7 +14565,33 @@
 					]
 				],
 				"text-justify": "auto",
-				"icon-image": "maki:hospital",
+				"icon-image": [
+					"match",
+					[
+						"get",
+						"esstype"
+					],
+					[
+						"Clinique",
+						"Dispensaire"
+
+					],
+					"maki:defibrillator",
+					[
+						"Centre de Santé",
+						"Poste de Santé",
+						"Hôpital Général de Référence",
+						"Centre de Santé de Référence",
+						"Centre Hopitalier",
+						"Hôpital",
+						"Centre Médical",
+						"Site Soin Communautaire"
+					],
+					"maki:hospital",
+					"Bureau Central de la Zone de Santé",
+					"maki:star",
+					"maki:hospital"
+				],
 				"icon-size": [
 					"interpolate",
 					[
@@ -14658,37 +14639,24 @@
 						"Centre Médical"
 						],
 						"#B44769",
-						"Bureau Central de la Zone de Santé",
-						"#ffff00",
 						"#646464"
 					]
 				],
-				"text-halo-color": [
-					"step",
-					[
-						"zoom"
-					],
-					"#e1e1e1",
-					14,
-					[
-						"match",
-						[
-							"get",
-							"esstype"
-						],
-						"Bureau Central de la Zone de Santé",
-						"#53565A",
-						"#e1e1e1"
-					]
-				],
+				"text-halo-color": "#e1e1e1",
 				"text-halo-width": [
-					"step",
+					"interpolate",
+					[
+						"linear"
+					],
 					[
 						"zoom"
 					],
-					1,
-					14,
-					1,
+					10.5,
+					0,
+					11,
+					0.25,
+					12,
+					0.75,
 					18,
 					1.25
 				],
