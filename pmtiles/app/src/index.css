@@ -14,7 +14,7 @@
 .maplibregl-legend-onlyRendered-checkbox,
 .maplibregl-legend-onlyRendered-label,
 .maplibregl-legend-title-label + br,
-.maplibregl-legend-onlyRendered-label + br {
+.maplibregl-legend-onlyRendered-label {
 	display: none;
 }
 
@@ -24,7 +24,7 @@
 }
 
 .maplibregl-legend-list {
-	background: rgba(255, 255, 255, 0.95);
+	background: rgba(255, 255, 255, 0.7);
 	backdrop-filter: blur(8px);
 	border-radius: 4px;
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.14);
@@ -33,7 +33,7 @@
 	max-width: 220px;
 	max-height: 60vh;
 	overflow-y: auto;
-	scrollbar-width: thin;
+	scrollbar-width: none;
 	margin: 0.25em;
 }
 
