@@ -323,14 +323,11 @@
 			},
 			"paint": {
 				"fill-color": [
-					"interpolate",
-					[
-						"exponential",
-						1.2
-					],
+					"step",
 					[
 						"zoom"
 					],
+					"#D7B9E4",
 					7,
 					[
 						"match",
@@ -345,6 +342,21 @@
 						"Hamlet",
 						"#DFC8E7",
 						"#DFC8E7"
+					],
+						12,
+					[
+						"match",
+						[
+							"get",
+							"type"
+						],
+						"Built-up Area",
+						"#D7B9E4",
+						"Small Settlement Area",
+						"#DEC6E8",
+						"Hamlet",
+						"#E6D0EB",
+						"#E6D0EB"
 					],
 					14,
 					[
@@ -460,14 +472,11 @@
 			},
 			"paint": {
 				"fill-color": [
-					"interpolate",
-					[
-						"exponential",
-						1.2
-					],
+					"step",
 					[
 						"zoom"
 					],
+					"#D7B9E4",
 					7,
 					[
 						"match",
@@ -482,6 +491,21 @@
 						"Hamlet",
 						"#DFC8E7",
 						"#DFC8E7"
+					],
+						12,
+					[
+						"match",
+						[
+							"get",
+							"extent_type"
+						],
+						"Built-up Area",
+						"#D7B9E4",
+						"Small Settlement Area",
+						"#DEC6E8",
+						"Hamlet",
+						"#E6D0EB",
+						"#E6D0EB"
 					],
 					14,
 					[

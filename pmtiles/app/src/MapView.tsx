@@ -218,10 +218,12 @@ style.sources.contours = {
 
 const LEGEND_LAYERS: Record<string, string> = {
   // "cod-health-facilities":     "Établissement de santé"
-  "cod-provinces-boundary":    "Province",
-  "cod-antenne-boundary":      "Antenne",
-  "cod-health-zones-boundary": "Zone de santé",
-  "cod-health-areas-boundary": "Aire de santé",
+  "nga-settlement-extents":     "Settlement extent",
+  "cod-provinces-boundary":    "Limite de la province",
+  "cod-antenne-boundary":      "Limite de l'antenne",
+  "cod-health-zones-boundary": "Limite de la zone de santé",
+  "cod-health-areas-boundary": "Limite de l'aire de santé",
+  "cod-settlement-extents":     "Zone de bâtiments",
 };
 
 function MapLibreView() {
@@ -362,6 +364,16 @@ function MapLibreView() {
         }) as unknown as IControl,
         "bottom-right",
       );
+
+      // onlyRendered:true re-checks queryRenderedFeatures on moveend/styledata.
+      // When a layer is re-enabled, styledata fires before tiles finish loading,
+      // so the item disappears. Wait for idle (tiles loaded) then fire moveend.
+      map.getContainer().addEventListener('change', (e: Event) => {
+        const cb = e.target as HTMLInputElement;
+        if (cb.type === 'checkbox' && cb.checked && cb.closest('.maplibregl-legend-list')) {
+          map.once('idle', () => map.fire('moveend'));
+        }
+      });
     });
 
     map.on("error", (e) => {
