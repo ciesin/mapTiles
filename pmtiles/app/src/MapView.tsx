@@ -3,6 +3,8 @@ import { render } from "solid-js/web";
 import "./index.css";
 import MaplibreInspect from "@maplibre/maplibre-gl-inspect";
 import "@maplibre/maplibre-gl-inspect/dist/maplibre-gl-inspect.css";
+import { MaplibreLegendControl } from "@watergis/maplibre-gl-legend";
+import "@watergis/maplibre-gl-legend/dist/maplibre-gl-legend.css";
 import * as maplibregl from "maplibre-gl";
 import {
   AttributionControl,
@@ -214,6 +216,16 @@ style.sources.contours = {
   return style;
 }
 
+const LEGEND_LAYERS: Record<string, string> = {
+  // "cod-health-facilities":     "Établissement de santé"
+  "nga-settlement-extents":     "Settlement extent",
+  "cod-provinces-boundary":    "Limite de la province",
+  "cod-antenne-boundary":      "Limite de l'antenne",
+  "cod-health-zones-boundary": "Limite de la zone de santé",
+  "cod-health-areas-boundary": "Limite de l'aire de santé",
+  "cod-settlement-extents":     "Zone de bâtiments",
+};
+
 function MapLibreView() {
   let mapContainer: HTMLDivElement | undefined;
   let hiddenRef: HTMLDivElement | undefined;
@@ -343,6 +355,25 @@ function MapLibreView() {
 
     map.on("load", () => {
       map.resize();
+      map.addControl(
+        new MaplibreLegendControl(LEGEND_LAYERS, {
+          showDefault:  true,
+          showCheckbox: true,
+          onlyRendered: true,
+          reverseOrder: true,
+        }) as unknown as IControl,
+        "bottom-right",
+      );
+
+      // onlyRendered:true re-checks queryRenderedFeatures on moveend/styledata.
+      // When a layer is re-enabled, styledata fires before tiles finish loading,
+      // so the item disappears. Wait for idle (tiles loaded) then fire moveend.
+      map.getContainer().addEventListener('change', (e: Event) => {
+        const cb = e.target as HTMLInputElement;
+        if (cb.type === 'checkbox' && cb.checked && cb.closest('.maplibregl-legend-list')) {
+          map.once('idle', () => map.fire('moveend'));
+        }
+      });
     });
 
     map.on("error", (e) => {
