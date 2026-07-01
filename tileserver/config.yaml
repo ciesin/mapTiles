@@ -18,11 +18,7 @@ cors: true
 # Warn on missing files instead of aborting startup
 on_invalid: warn
 
-# gzip is universally supported by ArcGIS Pro; brotli is not
-preferred_encoding: gzip
-
-# ArcGIS Pro cannot consume MLT format
-convert_to_mlt: disabled
+convert_to_mlt: auto
 
 styles:
   rendering: true
