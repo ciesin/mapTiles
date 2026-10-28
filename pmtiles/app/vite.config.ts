@@ -35,20 +35,21 @@ const serveSpritesInSpritesDir = () => ({
 // https://vitejs.dev/config/
 export default defineConfig({
 	optimizeDeps: {
-    include: ['maplibre-gl'],
-    exclude: ['maplibre-gl/dist/maplibre-gl-worker.mjs'] 
+		include: ['maplibre-gl'],
+		exclude: ['maplibre-gl/dist/maplibre-gl-worker.mjs']
 	},
 	plugins: [solid(), servePmtilesInTilesDir(), serveSpritesInSpritesDir(), tailwindcss()],
 	build: {
-		rollupOptions: {
-			input: { mapview: resolve(__dirname, "index.html") },
+		chunkSizeWarningLimit: 1500,
+		rolldownOptions: {
+			input: { mapview: resolve(import.meta.dirname, "index.html") },
 			output: {
-				manualChunks: {
-					maplibre: ["maplibre-gl"],
-					"maplibre-inspect": ["@maplibre/maplibre-gl-inspect"],
-					solid: ["solid-js"],
-				},
-			},
+				manualChunks(id) {
+					if (id.includes('node_modules/maplibre-gl')) {
+						return 'maplibre';
+					}
+				}
+			}
 		},
 	},
 	server: {
